@@ -72,6 +72,8 @@ def main():
                       help='What to comment on jira')
     popt.add_argument('-p', '--publish', action='store_true', dest='publish', required=False,
                       help='Whether to make the review request public', default=False)
+    popt.add_argument('-l', '--last-commit', action='store_true', dest='lastcommit', required=False,
+                      help='Create patch out of last commit rather than diff', default=False)
     opt = popt.parse_args()
 
     client = RBTJIRAClient()
